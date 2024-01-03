@@ -6,7 +6,7 @@
 int main(){ 
   int pid;
   int numero;
-  int status;
+  int status = 0;
   printf( "1) prima della fork \n" );
   printf( "Inserisci numero intero: " );
   scanf("%d", &numero);

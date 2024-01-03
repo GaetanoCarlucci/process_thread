@@ -7,8 +7,7 @@ int main(){
   pid1 = fork();  // creo primo processo figlio 
   pid2 = fork();  // creo secondo processo figlio 
   if ((pid1 == 0) || (pid2 == 0)){
-    printf("Sono il processo figlio con PID: %d\n", getpid());
-    printf("Il mio processo padre ha pid: %d\n", getppid());
+    printf("Sono il processo figlio con PID: %d. Il mio processo padre ha pid: %d\n", getpid(), getppid());
     exit(1) ;               // termina il processo figlio 
   }
   else{
