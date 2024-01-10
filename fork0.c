@@ -5,6 +5,7 @@
 int main(){ 
   int pid;
   printf( "1) prima della fork \n" );
+  //COMMENTARE IL COMANDO FORK. COSA SUCCEDE SECONDO TE?
   pid = fork();                            // creo processo figlio 
   printf( " 2) dopo della fork \n" );
   if (pid == 0){

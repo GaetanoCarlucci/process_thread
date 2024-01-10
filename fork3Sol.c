@@ -11,7 +11,7 @@ int main(){
     if (pid == 0){
       printf( " Sono il processo figlio con pid:%d.", getpid() );
       printf( " Il mio processo padre ha pid: %d\n", getppid());
-      exit(1) ;                              // termina il processo figlio 
+      exit(1);                              // termina il processo figlio 
     }
   } 
   sleep(2);

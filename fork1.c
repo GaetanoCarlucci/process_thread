@@ -10,19 +10,20 @@ int main(){
   printf( "1) prima della fork \n" );
   printf( "Inserisci numero intero: " );
   scanf("%d", &numero);
-  pid = fork();                            // creo processo figlio 
+
+  pid = fork();
+  
   printf( " 2) dopo della fork \n" );
   if (pid == 0){
+    
     sleep(3);
-    printf("Sono il processo figlio con PID: %d\n", getpid());
-    printf("Il mio processo padre ha pid: %d\n", getppid());
+    printf("Sono il processo figlio con PID: %d.Il mio processo padre ha pid: %d\n", getpid(), getppid());
     numero = numero + 15;
     printf("La somma nel processo figlio e' : %d\n", numero);
     exit(1) ;                              // termina il processo figlio 
   }
   else{
-    printf("Sono il processo padre con pid: %d\n", getpid());
-    printf("Il mio processo padre ha pid: %d\n", getppid());    
+    printf("Sono il processo padre con PID: %d.Il mio processo padre ha pid: %d\n", getpid(), getppid());
     numero = numero + 10;
     printf("La somma nel processo padre e' : %d\n", numero);
     pid = wait(&status);
