@@ -14,7 +14,7 @@ int main(){
       printf( " Sono il processo figlio con pid:%d.", getpid() );
       sleep(2);
       printf( " Il mio processo padre ha pid: %d\n", getppid());
-      exit(1) ;                              // termina il processo figlio 
+      exit(1);                              // termina il processo figlio 
     }
     else{
       //INSERISCI IN MODO OPPORTUNO LA FUNZIONE WAITPID AL FIDE DI CREARE UN FIGLIO ALLA VOLTA

@@ -12,7 +12,7 @@ int main(){
     sleep(3);
     printf(" 3) sono il processo figlio con pid:%d.", getpid());
     printf(" Il mio processo padre ha pid: %d\n", getppid());
-    exit(1) ;                              // termina il processo figlio 
+    exit(1);                              // termina il processo figlio 
   }
   else{
     printf(" 3) sono il processo padre pid:%d.", getpid());

@@ -17,15 +17,16 @@ int main(){
   if (pid == 0){
     
     sleep(3);
-    printf("Sono il processo figlio con PID: %d.Il mio processo padre ha pid: %d\n", getpid(), getppid());
+    printf("Sono il processo figlio con PID: %d. Il mio processo padre ha pid: %d\n", getpid(), getppid());
     numero = numero + 15;
     printf("La somma nel processo figlio e' : %d\n", numero);
     exit(1) ;                              // termina il processo figlio 
   }
   else{
-    printf("Sono il processo padre con PID: %d.Il mio processo padre ha pid: %d\n", getpid(), getppid());
+    printf("Sono il processo padre con PID: %d. Il mio processo padre ha pid: %d\n", getpid(), getppid());
     numero = numero + 10;
     printf("La somma nel processo padre e' : %d\n", numero);
+    //COMMENTARE IL COMANDO WAIT. COSA SUCCEDE SECONDO TE?
     pid = wait(&status);
     printf("Il pid restituito da wait e' : %d\n", pid);
     printf("Lo stato restituito da wait (exit del processo figlio) e' : %d\n", status);
